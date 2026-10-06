@@ -65,6 +65,13 @@ await page.getByRole('button', {name:'Finish'}).click();
 await expect(page.getByText('Thank you for your order!')).toBeVisible();
 
 
+await page.locator('#react-burger-menu-btn').click();
+await page.locator('#logout_sidebar_link').click();
+
+await page.locator('#user-name').clear();
+await page.locator('#password').clear();
+
+
 });
 
 
