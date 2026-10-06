@@ -23,10 +23,14 @@ export default defineConfig({
   },
 
   projects: [
-    {
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+  {
+    name: 'chromium',
+    use: {
+      ...devices['Desktop Chrome'],
+      viewport: null,
+      deviceScaleFactor: undefined,
     },
+  },
 
     // {
     //   name: 'Mobile Chrome',
