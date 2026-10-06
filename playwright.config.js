@@ -8,10 +8,16 @@ export default defineConfig({
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
   reporter: 'html',
+
   use: {
     // baseURL: 'http://localhost:3000',
     testIdAttribute: 'data-test',
     trace: 'on-first-retry',
+
+    // Slow down Playwright actions
+    launchOptions: {
+      slowMo: 1000
+    },
   },
 
   projects: [

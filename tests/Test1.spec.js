@@ -34,4 +34,6 @@ test('locked out user cannot log in', async ({ page }) => {
 
   await expect(page.getByTestId('error')).toContainText('locked out');
   await expect(page).toHaveURL('https://www.saucedemo.com/');
+
+  await page.get
 });
