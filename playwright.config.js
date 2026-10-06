@@ -8,6 +8,7 @@ export default defineConfig({
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
   reporter: 'html',
+  
 
   use: {
     // baseURL: 'http://localhost:3000',
@@ -16,6 +17,7 @@ export default defineConfig({
 
     // Slow down Playwright actions
     launchOptions: {
+      args: ['--start-maximized'],
       slowMo: 1000
     },
   },
